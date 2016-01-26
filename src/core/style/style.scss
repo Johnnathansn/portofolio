@@ -1,0 +1,126 @@
+body {
+    margin          : 0 auto; // centering layout
+    color           : #BDB6B6;
+    background-color: #333334;
+    font-family     : sans-serif;
+    position        : relative;
+    overflow        : hidden;
+}
+
+// check for different resolutions/devices
+
+// header
+#header
+{
+    height          : 40px;
+    width           : 100%;
+    top             : 0px;
+    left            : 0px;
+    right           : 0px;
+    color           : white;
+    background-color: #333;
+    border          : 1px solid #444;
+    position        : absolute;
+    z-index         : 100;
+}
+
+    #logo
+    {
+        position: absolute;
+        left    : 10px;
+        top     : 5px;
+    }
+    #navigation
+    {
+        position: absolute;
+        right   : 10px;
+        top     : 5px;
+    }
+
+        // Menu system
+        // main menu
+        .navMenu ul {
+            list-style      : none;
+            position        : relative;
+            background-color: #333;
+        }
+        .navMenu ul:after {
+            content: "";
+            display: block;
+            clear  : both;
+        }
+        .navMenu ul li {
+            float    : left;
+            display  : inline-block;
+            position : relative;
+            min-width: 90px;
+        }
+
+        // 1st sub menu
+        .navMenu ul ul {
+            display : none;
+            position: absolute;
+            right   : 0%;
+            top     : 100%;
+        }
+
+        // 2st sub menu
+        .navMenu ul ul ul {
+            display : none;
+            position: absolute;
+            right   : 100%;
+            top     : 0%;
+        }
+        // menu links style
+        .navMenu a {
+            text-decoration: none;
+            display        : block;
+            color          : #BDB6B6;
+            padding        : 5px;
+        }
+
+        //hover configuration
+        .navMenu ul li:hover > ul { display: block; }
+        .navMenu ul li:hover > a { background-color: #666; }
+        .navMenu ul ul li:hover > ul { display: block; }
+        .navMenu a:hover { background-color: #666; }
+
+// footer
+#footer
+{
+    display         : flex;
+    align-items     : center;
+    height          : 40px;
+    bottom          : 0px;
+    left            : 0px;
+    right           : 0px;
+    background-color: #333;
+    border          : 1px solid #444;
+    position        : absolute;
+    z-index         : 100;
+}
+    #socialmedia
+    {
+        width  : 5%;
+        padding: 5px;
+    }
+    #sectionmap
+    {
+        padding-left: 5px;
+        width       : 90%;
+    }
+
+// content
+#main-container
+{
+    position        : absolute;
+    bottom          : 2px;
+    top             : 2px;
+    padding         : 10px;
+    left            : 0px;
+    right           : 0px;
+    z-index         : 50;
+    margin          : 40px 0;
+    background-color: #222;
+    box-shadow      : inset 0px 12px 12px -12px rgba(0, 0, 0, 0.5), inset 0px -12px 12px -12px rgba(0, 0, 0, 0.5);
+}

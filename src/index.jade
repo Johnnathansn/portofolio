@@ -1,0 +1,49 @@
+doctype html
+html(ng-app="cvApp")
+    head
+        meta(charset="utf-8")
+        base(href="/")
+        title John's online resume
+        link(rel='stylesheet', href='core/style/style.css')
+    body
+        //navigation
+        #header
+            #logo
+                p <b>Johnnathan Santiago Nogueira</b> - WEB DEVELOPER
+                hr.style-one
+
+            #navigation
+                .navMenu
+                    ul
+                        li
+                            a(href="#", class="center") -
+                            ul
+                                li
+                                    a(href="#", ui-sref="home") Info
+                                    ul
+                                        li
+                                            a(href="#", ui-sref="blog") Blog
+                                        li
+                                            a(href="#", ui-sref="projects") Projects
+                                        li
+                                            a(href="#", ui-sref="about") About
+                                li
+                                    a(href="#", ui-sref="contact") Contact
+
+        //views
+        #main-container
+            div(ui-view)
+
+        //info etc.
+        #footer
+            #socialmedia.fleft
+                img(src='core/images/facebook-2-16.png')
+            #sectionmap.fleft
+                |Section
+                |Map
+            div
+                |2015.
+
+        script(src='core/app.js')
+
+
