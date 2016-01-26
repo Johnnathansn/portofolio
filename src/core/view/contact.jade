@@ -4,7 +4,7 @@ p You can always send me a message. <br />
 #contact(ng-controller="contactCtrl as vm")
 
     #mailForm.fleft
-        form(ng-submit="vm.sendMsg()")
+        form(ng-submit="vm.add(vm.newMessage)")
             p Message:
             input(type="text", id="subject", name="subject", ng-model="vm.newMessage.subject", size="40")
             br
@@ -19,8 +19,8 @@ p You can always send me a message. <br />
         #msgPreview(ng-show="vm.msgView")
          | {{ vm.newMessage.subject }} {{ vm.newMessage.body }}
 
-    #msgList(ng-hide="vm.msgCount")
-        p List
+    #msgList(ng-show="vm.showList")
+        p Message List
         ul
             li(ng-repeat="message in vm.messages") {{ message.subject }} - {{ message.date }}
 
