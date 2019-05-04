@@ -1,0 +1,1 @@
+Simple assingments for BCIT COMP-2913 React & Modern JavaScript
